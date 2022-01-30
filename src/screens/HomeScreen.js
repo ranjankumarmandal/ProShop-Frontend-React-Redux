@@ -7,7 +7,7 @@ const HomeScreen = () => {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const res = await axios.get('http://localhost:5000/api/products');
+    const res = await axios.get('http://127.0.0.1:5000/api/products');
     setProducts(res.data);
   };
 
