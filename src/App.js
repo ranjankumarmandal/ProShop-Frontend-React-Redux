@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -6,8 +7,10 @@ const App = () => {
   return (
     <>
       <Header />
-      <main>
-        <p>App component</p>
+      <main className='py-3'>
+        <Container>
+          <p>App component</p>
+        </Container>
       </main>
       <Footer />
     </>
