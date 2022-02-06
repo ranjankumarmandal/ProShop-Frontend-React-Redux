@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Toast } from 'react-bootstrap';
 import Product from '../components/Product';
 import { listProducts } from '../actions/productActions';
 import Message from '../components/Message';
@@ -15,9 +15,22 @@ const HomeScreen = () => {
     dispatch(listProducts());
   }, [dispatch]);
 
+  const [show, setShow] = useState(true);
+
   return (
     <>
       <h1>Latest Products</h1>
+      <Toast onClose={() => setShow(false)} show={show} delay={7000} autohide>
+        <Toast.Body>
+          Welcome to ProShop made by -{' '}
+          <a
+            href='https://www.linkedin.com/in/ranjan-kumar-m-818367158/'
+            target='_blank'
+          >
+            Ranjan Kumar Mandal
+          </a>
+        </Toast.Body>
+      </Toast>
       {loading ? (
         <Loader />
       ) : error ? (
