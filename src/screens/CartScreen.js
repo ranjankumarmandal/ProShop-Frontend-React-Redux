@@ -62,6 +62,15 @@ const CartScreen = ({ match, location, history }) => {
                       ))}
                     </Form.Select>
                   </Col>
+                  <Col md={2}>
+                    <Button
+                      type='button'
+                      variant='white'
+                      onClick={() => removeFromCartHandler(item.product)}
+                    >
+                      <i className='fas fa-trash'></i>
+                    </Button>
+                  </Col>
                 </Row>
               </ListGroup.Item>
             ))}
