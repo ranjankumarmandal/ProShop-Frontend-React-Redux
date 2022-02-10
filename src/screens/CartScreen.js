@@ -25,6 +25,8 @@ const CartScreen = ({ match, location, history }) => {
     if (productId) dispatch(addToCart(productId, qty));
   }, [dispatch, productId, qty]);
 
+  const removeFromCartHandler = () => {};
+
   return (
     <Row>
       <Col md={8}>
