@@ -25,7 +25,22 @@ const CartScreen = ({ match, location, history }) => {
     if (productId) dispatch(addToCart(productId, qty));
   }, [dispatch, productId, qty]);
 
-  return <div>Cart Page</div>;
+  return (
+    <Row>
+      <Col md={8}>
+        <h1>Shopping Cart</h1>
+        {cartItems.length === 0 ? (
+          <Message>
+            Your cart is empty <Link to='/'>Go Back</Link>{' '}
+          </Message>
+        ) : (
+          <ListGroup variant='flush'></ListGroup>
+        )}
+      </Col>
+      <Col md={2}></Col>
+      <Col md={2}></Col>
+    </Row>
+  );
 };
 
 export default CartScreen;
