@@ -82,7 +82,6 @@ const CartScreen = ({ match, location, history }) => {
         )}
       </Col>
       <Col md={2}></Col>
-      <Col md={2}></Col>
     </Row>
   );
 };
