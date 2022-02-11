@@ -81,7 +81,7 @@ const CartScreen = ({ match, location, history }) => {
           </ListGroup>
         )}
       </Col>
-      <Col md={2}></Col>
+      <Col md={4}></Col>
     </Row>
   );
 };
