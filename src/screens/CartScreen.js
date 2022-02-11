@@ -84,7 +84,9 @@ const CartScreen = ({ match, location, history }) => {
       <Col md={4}>
         <Card>
           <ListGroup variant='flush'>
-            <ListGroup.Item></ListGroup.Item>
+            <ListGroup.Item>
+              <h2>Subtotal () items</h2>
+            </ListGroup.Item>
           </ListGroup>
         </Card>
       </Col>
