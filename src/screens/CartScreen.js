@@ -82,7 +82,9 @@ const CartScreen = ({ match, location, history }) => {
         )}
       </Col>
       <Col md={4}>
-        <Card></Card>
+        <Card>
+          <ListGroup variant='flush'></ListGroup>
+        </Card>
       </Col>
     </Row>
   );
