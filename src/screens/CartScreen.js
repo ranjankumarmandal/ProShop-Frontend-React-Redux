@@ -29,6 +29,10 @@ const CartScreen = ({ match, location, history }) => {
     console.log('remove');
   };
 
+  const checkoutHandler = () => {
+    console.log('checkout');
+  };
+
   return (
     <Row>
       <Col md={8}>
@@ -89,7 +93,20 @@ const CartScreen = ({ match, location, history }) => {
                 Subtotal ({cartItems.reduce((acc, curr) => acc + curr.qty, 0)})
                 items
               </h2>
-              ${cartItems.reduce((acc, curr) => acc + curr.qty * curr.price, 0)}
+              $
+              {cartItems
+                .reduce((acc, curr) => acc + curr.qty * curr.price, 0)
+                .toFixed(2)}
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Button
+                type='button'
+                className='btn-block'
+                disabled={cartItems.length === 0}
+                onClick={checkoutHandler}
+              >
+                Proceed To Checkout
+              </Button>
             </ListGroup.Item>
           </ListGroup>
         </Card>
