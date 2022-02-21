@@ -7,9 +7,17 @@ import Loader from '../components/Loader';
 import { login } from '../actions/userActions';
 import FormContainer from '../components/FormContainer';
 
-const LoginScreen = () => {
+const LoginScreen = ({ location }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const redirect = location.search ? location.search.split('=')[1] : '/';
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    // Dispatch Login
+  };
 
   return (
     <FormContainer>
