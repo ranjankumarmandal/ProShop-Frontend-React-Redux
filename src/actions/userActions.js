@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { USER_LOGIN_REQUEST } from '../constants/userConstants';
 
 export const login = (email, password) => async (dispatch) => {
@@ -11,5 +12,11 @@ export const login = (email, password) => async (dispatch) => {
         'Content-Type': 'application/json',
       },
     };
+
+    const { data } = await axios.post(
+      '/api/users/login',
+      { email, password },
+      config
+    );
   } catch (error) {}
 };
