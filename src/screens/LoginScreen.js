@@ -11,6 +11,8 @@ const LoginScreen = ({ location }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const dispatch = useDispatch();
+
   const redirect = location.search ? location.search.split('=')[1] : '/';
 
   const submitHandler = (e) => {
@@ -33,7 +35,7 @@ const LoginScreen = ({ location }) => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId='email'>
+        <Form.Group controlId='password'>
           <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
@@ -43,7 +45,7 @@ const LoginScreen = ({ location }) => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type='submit' variant='primary'>
+        <Button type='submit' variant='primary' className='my-3'>
           Sign In
         </Button>
       </Form>
