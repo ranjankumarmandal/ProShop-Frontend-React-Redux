@@ -5,12 +5,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { login } from '../actions/userActions';
+import FormContainer from '../components/FormContainer';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  return <div>LoginScreen</div>;
+  return (
+    <FormContainer>
+      <h1>Sign In</h1>
+    </FormContainer>
+  );
 };
 
 export default LoginScreen;
