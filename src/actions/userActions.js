@@ -18,7 +18,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      '/api/users/login',
+      'http://localhost:5000/api/users/login',
       { email, password },
       config
     );
@@ -34,7 +34,7 @@ export const login = (email, password) => async (dispatch) => {
       type: USER_LOGIN_FAIL,
       payload:
         error.response && error.response.data.message
-          ? error.response.data.meesge
+          ? error.response.data.message
           : error.message,
     });
   }
