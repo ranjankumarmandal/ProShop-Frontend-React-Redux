@@ -19,11 +19,18 @@ const ProfileScreen = ({ location, history }) => {
   const { loading, error, user } = userDetails;
 
   const userLogin = useSelector((state) => state.userLogin);
-  const { loading, error, userInfo } = userLogin;
+  const { userInfo } = userLogin;
 
   useEffect(() => {
-    if (userInfo) history.push(redirect);
-  }, [history, userInfo, redirect]);
+    if (!userInfo) history.push('/login');
+    else {
+      if (!user.name) dispatch(getUserDetails('profile'));
+      else {
+        setName(user.name);
+        setEmail(user.email);
+      }
+    }
+  }, [dispatch, history, userInfo]);
 
   const submitHandler = (e) => {
     e.preventDefault();
