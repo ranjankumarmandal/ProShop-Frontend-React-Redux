@@ -28,8 +28,7 @@ const RegisterScreen = ({ location, history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    // Dispatch Login
-    dispatch(login(email, password));
+    // Dispatch Register
   };
 
   return (
