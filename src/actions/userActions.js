@@ -62,13 +62,13 @@ export const register = (name, email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      'http://localhost:5000/api/users/login',
-      { email, password },
+      'http://localhost:5000/api/users',
+      { name, email, password },
       config
     );
 
     dispatch({
-      type: USER_LOGIN_SUCCESS,
+      type: USER_REGISTER_SUCCESS,
       payload: data,
     });
 
