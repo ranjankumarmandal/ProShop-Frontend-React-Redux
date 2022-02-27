@@ -20,6 +20,7 @@ const App = () => {
             <Route exact path='/' component={HomeScreen} />
             <Route exact path='/product/:id' component={ProductScreen} />
             <Route exact path='/login' component={LoginScreen} />
+            <Route exact path='/register' component={RegisterScreen} />
             <Route exact path='/cart/:id?' component={CartScreen} />
             <Route component={PageNotFoundScreen} />
           </Switch>
