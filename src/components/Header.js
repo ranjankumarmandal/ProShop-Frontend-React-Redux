@@ -8,6 +8,8 @@ const Header = () => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  const logoutHandler = () => {};
+
   return (
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
