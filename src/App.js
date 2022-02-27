@@ -8,6 +8,7 @@ import ProductScreen from './screens/ProductScreen';
 import PageNotFoundScreen from './screens/PageNotFoundScreen';
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
 
 const App = () => {
   return (
