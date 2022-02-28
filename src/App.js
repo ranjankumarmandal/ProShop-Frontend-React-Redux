@@ -25,6 +25,7 @@ const App = () => {
             <Route exact path='/register' component={RegisterScreen} />
             <Route exact path='/profile' component={ProfileScreen} />
             <Route exact path='/cart/:id?' component={CartScreen} />
+            <Route exact path='/shipping' component={ShippingScreen} />
             <Route component={PageNotFoundScreen} />
           </Switch>
         </Container>
