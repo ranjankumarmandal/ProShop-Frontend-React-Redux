@@ -16,7 +16,7 @@ const ShippingScreen = ({ history }) => {
         <Form.Group controlId='address'>
           <Form.Label>Address</Form.Label>
           <Form.Control
-            type='address'
+            type='text'
             placeholder='Enter Address'
             value={address}
             onChange={(e) => setAddress(e.target.value)}
