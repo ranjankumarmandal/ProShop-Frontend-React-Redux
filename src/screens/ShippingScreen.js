@@ -9,7 +9,7 @@ const ShippingScreen = ({ history }) => {
   const [postalCode, setPostalCode] = useState('');
   const [country, setCountry] = useState('');
 
-  return <div>ShippingScreen</div>;
+  return <FormContainer>ShippingScreen</FormContainer>;
 };
 
 export default ShippingScreen;
