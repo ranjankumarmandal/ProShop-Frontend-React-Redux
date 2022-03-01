@@ -45,6 +45,17 @@ const ShippingScreen = ({ history }) => {
             onChange={(e) => setPostalCode(e.target.value)}
           ></Form.Control>
         </Form.Group>
+
+        <Form.Group controlId='country'>
+          <Form.Label>Country</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Enter country'
+            required
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+          ></Form.Control>
+        </Form.Group>
       </Form>
     </FormContainer>
   );
