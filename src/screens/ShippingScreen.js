@@ -9,7 +9,22 @@ const ShippingScreen = ({ history }) => {
   const [postalCode, setPostalCode] = useState('');
   const [country, setCountry] = useState('');
 
-  return <FormContainer>ShippingScreen</FormContainer>;
+  return (
+    <FormContainer>
+      <h1>Shipping</h1>
+      <Form onSubmit={submitHandler}>
+        <Form.Group controlId='address'>
+          <Form.Label>Address</Form.Label>
+          <Form.Control
+            type='address'
+            placeholder='Enter Address'
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          ></Form.Control>
+        </Form.Group>
+      </Form>
+    </FormContainer>
+  );
 };
 
 export default ShippingScreen;
