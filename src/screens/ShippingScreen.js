@@ -9,6 +9,11 @@ const ShippingScreen = ({ history }) => {
   const [postalCode, setPostalCode] = useState('');
   const [country, setCountry] = useState('');
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log('submit');
+  };
+
   return (
     <FormContainer>
       <h1>Shipping</h1>
@@ -56,6 +61,7 @@ const ShippingScreen = ({ history }) => {
             onChange={(e) => setCountry(e.target.value)}
           ></Form.Control>
         </Form.Group>
+        <br />
 
         <Button type='submit' variant='primary'>
           Continue
