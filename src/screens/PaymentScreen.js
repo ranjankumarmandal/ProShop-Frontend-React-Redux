@@ -11,10 +11,7 @@ const PaymentScreen = ({ history }) => {
 
   if (!shippingAddress) history.push('/shipping');
 
-  const [address, setAddress] = useState(shippingAddress.address);
-  const [city, setCity] = useState(shippingAddress.city);
-  const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
-  const [country, setCountry] = useState(shippingAddress.country);
+  const [paymentMehod, setPaymentMethod] = useState('PayPal');
 
   const dispatch = useDispatch();
 
