@@ -23,53 +23,24 @@ const PaymentScreen = ({ history }) => {
 
   return (
     <FormContainer>
-      <CheckoutSteps step1 step2 />
-      <h1>Shipping</h1>
+      <CheckoutSteps step1 step2 step3 />
+      <h1>Payment Method</h1>
       <Form onSubmit={submitHandler}>
-        <Form.Group controlId='address'>
-          <Form.Label>Address</Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Enter Address'
-            required
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-          ></Form.Control>
+        <Form.Group>
+          <Form.Label as='legend'>Select Method</Form.Label>
         </Form.Group>
 
-        <Form.Group controlId='city'>
-          <Form.Label>City</Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Enter city'
-            required
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
-
-        <Form.Group controlId='postalCode'>
-          <Form.Label>Postal Code</Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Enter postal code'
-            required
-            value={postalCode}
-            onChange={(e) => setPostalCode(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
-
-        <Form.Group controlId='country'>
-          <Form.Label>Country</Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Enter country'
-            required
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
-        <br />
+        <Col>
+          <Form.Check
+            type='radio'
+            label='PayPal or Credit Card'
+            id='PayPal'
+            name='paymentMethod'
+            value='PayPal'
+            checked
+            onChange={(e) => setPaymentMethod(e.target.value)}
+          ></Form.Check>
+        </Col>
 
         <Button type='submit' variant='primary'>
           Continue
