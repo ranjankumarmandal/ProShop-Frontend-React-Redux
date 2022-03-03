@@ -17,8 +17,8 @@ const PaymentScreen = ({ history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(saveShippingAddress({ address, city, postalCode, country }));
-    history.push('/payment');
+    dispatch(savePaymentMethod(paymentMehod));
+    history.push('/placeorder');
   };
 
   return (
