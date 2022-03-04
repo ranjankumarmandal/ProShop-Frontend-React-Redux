@@ -5,7 +5,14 @@ import Message from '../components/Message';
 import CheckoutSteps from '../components/CheckoutSteps';
 
 const PlaceOrderScreen = () => {
-  return <div>PlaceOrderScreen</div>;
+  const cart = useSelector((state) => state.cart);
+
+  return (
+    <>
+      <CheckoutSteps step1 step2 step3 step4 />
+      <Row></Row>
+    </>
+  );
 };
 
 export default PlaceOrderScreen;
