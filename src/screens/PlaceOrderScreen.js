@@ -10,7 +10,21 @@ const PlaceOrderScreen = () => {
   return (
     <>
       <CheckoutSteps step1 step2 step3 step4 />
-      <Row></Row>
+      <Row>
+        <Col md={8}>
+          <ListGroup variant='flush'>
+            <ListGroup.Item>
+              <h2>Shipping</h2>
+              <p>
+                <strong>Adress</strong>
+                {cart.shippingAddress.address}, {cart.shippingAddress.city},{' '}
+                {cart.shippingAddress.postalCode},{' '}
+                {cart.shippingAddress.country}
+              </p>
+            </ListGroup.Item>
+          </ListGroup>
+        </Col>
+      </Row>
     </>
   );
 };
