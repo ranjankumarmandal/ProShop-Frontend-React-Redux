@@ -30,6 +30,10 @@ const PlaceOrderScreen = () => {
                 {cart.paymentMethod}
               </p>
             </ListGroup.Item>
+
+            <ListGroup.Item>
+              <h2>Order Items</h2>
+            </ListGroup.Item>
           </ListGroup>
         </Col>
       </Row>
