@@ -65,6 +65,8 @@ const PlaceOrderScreen = () => {
             </ListGroup.Item>
           </ListGroup>
         </Col>
+
+        <Col md={4}></Col>
       </Row>
     </>
   );
