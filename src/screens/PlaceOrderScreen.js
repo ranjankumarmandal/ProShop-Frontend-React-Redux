@@ -100,6 +100,10 @@ const PlaceOrderScreen = () => {
                   <Col>${cart.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
+
+              <ListGroup.Item>
+                <Button type='submit'></Button>
+              </ListGroup.Item>
             </ListGroup>
           </Card>
         </Col>
