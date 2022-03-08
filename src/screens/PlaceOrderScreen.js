@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 const PlaceOrderScreen = () => {
   const cart = useSelector((state) => state.cart);
 
+  const placeOrderHandler = () => {};
+
   return (
     <>
       <CheckoutSteps step1 step2 step3 step4 />
@@ -102,7 +104,14 @@ const PlaceOrderScreen = () => {
               </ListGroup.Item>
 
               <ListGroup.Item>
-                <Button type='submit'></Button>
+                <Button
+                  type='submit'
+                  className='btn-block'
+                  disabled={cart.cartItems === 0}
+                  onClick={placeOrderHandler}
+                >
+                  Place Order
+                </Button>
               </ListGroup.Item>
             </ListGroup>
           </Card>
