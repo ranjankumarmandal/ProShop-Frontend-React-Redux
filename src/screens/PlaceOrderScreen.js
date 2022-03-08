@@ -93,6 +93,13 @@ const PlaceOrderScreen = () => {
                   <Col>${cart.taxPrice}</Col>
                 </Row>
               </ListGroup.Item>
+
+              <ListGroup.Item>
+                <Row>
+                  <Col>Total</Col>
+                  <Col>${cart.totalPrice}</Col>
+                </Row>
+              </ListGroup.Item>
             </ListGroup>
           </Card>
         </Col>
