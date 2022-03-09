@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 const PlaceOrderScreen = () => {
   const cart = useSelector((state) => state.cart);
 
+  // calculate prices
+
   const placeOrderHandler = () => {};
 
   return (
