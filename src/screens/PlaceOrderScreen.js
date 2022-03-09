@@ -11,12 +11,11 @@ const PlaceOrderScreen = () => {
   const addDecimals = (number) => (Math.round(number * 100) / 100).toFixed(2);
 
   // calculate prices
-  cart.itemsPrice = cart.cartItems.reduce(
-    (acc, curr) => acc + curr.price * curr.qty,
-    0
+  cart.itemsPrice = addDecimals(
+    cart.cartItems.reduce((acc, curr) => acc + curr.price * curr.qty, 0)
   );
 
-  cart.shippingPrice = cart.itemsPrice > 100 ? 0 : 100;
+  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
   cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)));
 
   const placeOrderHandler = () => {};
