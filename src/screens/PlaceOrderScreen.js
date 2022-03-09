@@ -14,6 +14,8 @@ const PlaceOrderScreen = () => {
     0
   );
 
+  cart.shippingPrice = cart.itemsPrice > 100 ? 0 : 100;
+
   const placeOrderHandler = () => {};
 
   return (
