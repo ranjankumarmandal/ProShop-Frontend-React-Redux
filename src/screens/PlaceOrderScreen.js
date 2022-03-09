@@ -15,6 +15,7 @@ const PlaceOrderScreen = () => {
   );
 
   cart.shippingPrice = cart.itemsPrice > 100 ? 0 : 100;
+  cart.taxPrice = Number((0.15 * cart.itemsPrice).toFixed(2));
 
   const placeOrderHandler = () => {};
 
