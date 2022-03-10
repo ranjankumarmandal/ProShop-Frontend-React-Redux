@@ -10,7 +10,7 @@ const PlaceOrderScreen = () => {
 
   const addDecimals = (number) => (Math.round(number * 100) / 100).toFixed(2);
 
-  // calculate prices
+  // calculate all prices
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, curr) => acc + curr.price * curr.qty, 0)
   );
