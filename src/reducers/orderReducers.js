@@ -12,6 +12,13 @@ export const orderCreateReducer = (state = {}, action) => {
         loading: true,
       };
 
+    case ORDER_CREATE_SUCCESS:
+      return {
+        loading: false,
+        success: true,
+        orders: action.payload,
+      };
+
     default:
       return state;
   }
