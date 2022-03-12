@@ -6,4 +6,10 @@ import {
 
 export const orderCreateReducer = (state = {}, action) => {
   // define reducers with switch
+  switch (action.type) {
+    case ORDER_CREATE_REQUEST:
+      return {
+        loading: true,
+      };
+  }
 };
