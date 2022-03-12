@@ -11,5 +11,8 @@ export const orderCreateReducer = (state = {}, action) => {
       return {
         loading: true,
       };
+
+    default:
+      return state;
   }
 };
