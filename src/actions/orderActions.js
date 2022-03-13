@@ -23,9 +23,9 @@ export const createOrder = (order) => (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.put(
-      'http://localhost:5000/api/users/profile',
-      user,
+    const { data } = await axios.post(
+      'http://localhost:5000/api/orders',
+      order,
       config
     );
 
