@@ -139,6 +139,10 @@ const PlaceOrderScreen = ({ history }) => {
               </ListGroup.Item>
 
               <ListGroup.Item>
+                {error && <Message variant='danger'>{error}</Message>}
+              </ListGroup.Item>
+
+              <ListGroup.Item>
                 <Button
                   type='submit'
                   className='btn-block'
