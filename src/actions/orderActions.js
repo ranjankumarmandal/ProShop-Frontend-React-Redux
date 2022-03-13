@@ -6,7 +6,7 @@ import {
 } from '../constants/orderConstants';
 
 // create order actions
-export const createOrder = (order) => (dispatch, getState) => {
+export const createOrder = (order) => async (dispatch, getState) => {
   // implement create order action
   try {
     dispatch({
