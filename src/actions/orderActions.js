@@ -7,7 +7,7 @@ import {
 
 // create order actions
 export const createOrder = (order) => async (dispatch, getState) => {
-  // implement create order action
+  // implement createOrder() action
   try {
     dispatch({
       type: ORDER_CREATE_REQUEST,
