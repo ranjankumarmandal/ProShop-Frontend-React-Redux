@@ -36,7 +36,7 @@ const OrderScreen = ({ match }) => {
       );
       const script = document.createElement('script');
       script.type = 'text/javascript';
-      script.src = `https://paypal.com/sdk/js?client-id=${clientId}`;
+      script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}`;
       script.async = true;
       script.onLoad = () => {
         setSdkReady(true);
@@ -45,6 +45,10 @@ const OrderScreen = ({ match }) => {
     };
 
     if (!order || successPay) dispatch(getOrderDetails(orderId));
+    else if (!order.isPaid) {
+      if (!window.paypal) addPayPalScript();
+      else setSdkReady(true);
+    }
   }, [dispatch, orderId, successPay, order]);
 
   return loading ? (
