@@ -40,6 +40,7 @@ const OrderScreen = ({ match }) => {
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h2>Shipping</h2>
+              <strong>Name: </strong> {order.user.name}
               <p>
                 <strong>Adress: </strong>
                 {order.shippingAddress.address}, {order.shippingAddress.city},{' '}
