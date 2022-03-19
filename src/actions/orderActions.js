@@ -65,9 +65,8 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post(
-      'http://localhost:5000/api/orders',
-      order,
+    const { data } = await axios.get(
+      `http://localhost:5000/api/orders/${id}`,
       config
     );
 
