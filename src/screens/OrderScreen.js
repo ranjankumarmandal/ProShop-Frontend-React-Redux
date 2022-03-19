@@ -35,6 +35,10 @@ const OrderScreen = ({ match }) => {
       script.type = 'text/javascript';
       script.src = `https://paypal.com/sdk/js?client-id=${clientId}`;
       script.async = true;
+      script.onLoad = () => {
+        setSdkReady(true);
+      };
+      document.body.appendChild(script);
     };
 
     dispatch(getOrderDetails(orderId));
