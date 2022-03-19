@@ -94,7 +94,7 @@ export const payOrder =
     // implement getOrderDetails() action function
     try {
       dispatch({
-        type: ORDER_DETAILS_REQUEST,
+        type: ORDER_PAY_REQUEST,
       });
 
       const {
@@ -113,12 +113,12 @@ export const payOrder =
       );
 
       dispatch({
-        type: ORDER_DETAILS_SUCCESS,
+        type: ORDER_PAY_SUCCESS,
         payload: data,
       });
     } catch (error) {
       dispatch({
-        type: ORDER_DETAILS_FAIL,
+        type: ORDER_PAY_FAIL,
         payload:
           error.response && error.response.data.message
             ? error.response.data.message
