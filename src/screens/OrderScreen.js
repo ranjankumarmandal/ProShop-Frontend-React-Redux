@@ -11,11 +11,11 @@ const OrderScreen = ({ match }) => {
   const dispatch = useDispatch();
 
   const orderDetails = useSelector((state) => state.orderDetails);
-  const { order, success, error } = orderDetails;
+  const { order, loading, error } = orderDetails;
 
   useEffect(() => {
-    if (success) history.push(`/order/${order._id}`);
-  }, [history, success]);
+    dispatch(getOrderDetails(orderId));
+  }, []);
 
   const placeOrderHandler = () => {
     dispatch(
