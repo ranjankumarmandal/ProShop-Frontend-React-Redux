@@ -45,8 +45,8 @@ export const createOrder = (order) => async (dispatch, getState) => {
   }
 };
 
-export const getOrderDetails = (order) => async (dispatch, getState) => {
-  // implement createOrder() action function
+export const getOrderDetails = (id) => async (dispatch, getState) => {
+  // implement getOrderDetails() action function
   try {
     dispatch({
       type: ORDER_CREATE_REQUEST,
