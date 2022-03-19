@@ -113,21 +113,6 @@ const OrderScreen = ({ match }) => {
                   <Col>${order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
-
-              <ListGroup.Item>
-                {error && <Message variant='danger'>{error}</Message>}
-              </ListGroup.Item>
-
-              <ListGroup.Item>
-                <Button
-                  type='submit'
-                  className='btn-block'
-                  disabled={cart.cartItems === 0}
-                  onClick={placeOrderHandler}
-                >
-                  Place Order
-                </Button>
-              </ListGroup.Item>
             </ListGroup>
           </Card>
         </Col>
