@@ -33,7 +33,10 @@ export const orderCreateReducer = (state = {}, action) => {
   }
 };
 
-export const orderDetailsReducer = (state = {}, action) => {
+export const orderDetailsReducer = (
+  state = { orderItems: [], shippingAddress: {} },
+  action
+) => {
   // define reducers with switch
   switch (action.type) {
     case ORDER_CREATE_REQUEST:
