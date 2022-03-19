@@ -44,8 +44,8 @@ const OrderScreen = ({ match }) => {
       document.body.appendChild(script);
     };
 
-    if (successPay) dispatch(getOrderDetails(orderId));
-  }, [dispatch, orderId, successPay]);
+    if (!order || successPay) dispatch(getOrderDetails(orderId));
+  }, [dispatch, orderId, successPay, order]);
 
   return loading ? (
     <Loader />
