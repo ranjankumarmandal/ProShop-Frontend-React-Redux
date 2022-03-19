@@ -10,8 +10,8 @@ const OrderScreen = ({ match }) => {
   const orderId = match.params.id;
   const dispatch = useDispatch();
 
-  const orderCreate = useSelector((state) => state.orderCreate);
-  const { order, success, error } = orderCreate;
+  const orderDetails = useSelector((state) => state.orderDetails);
+  const { order, success, error } = orderDetails;
 
   useEffect(() => {
     if (success) history.push(`/order/${order._id}`);
