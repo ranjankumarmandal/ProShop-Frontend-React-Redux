@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { Link } from 'react-router-dom';
-import { createOrder } from '../actions/orderActions';
+import { getOrderDetails } from '../actions/orderActions';
 
 const OrderScreen = ({ history }) => {
   const dispatch = useDispatch();
