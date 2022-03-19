@@ -45,7 +45,7 @@ const OrderScreen = ({ match }) => {
     };
 
     if (successPay) dispatch(getOrderDetails(orderId));
-  }, [dispatch, orderId]);
+  }, [dispatch, orderId, successPay]);
 
   return loading ? (
     <Loader />
