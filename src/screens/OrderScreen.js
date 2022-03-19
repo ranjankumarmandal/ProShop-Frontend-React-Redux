@@ -41,7 +41,7 @@ const OrderScreen = ({ match }) => {
               <h2>Payment Method</h2>
               <p>
                 <strong>Method: </strong>
-                {cart.paymentMethod}
+                {order.paymentMethod}
               </p>
             </ListGroup.Item>
 
