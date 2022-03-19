@@ -9,6 +9,7 @@ import { getOrderDetails } from '../actions/orderActions';
 
 const OrderScreen = ({ match }) => {
   const orderId = match.params.id;
+  const [sdkReady, setSdkReady] = useState(false);
   const dispatch = useDispatch();
 
   const orderDetails = useSelector((state) => state.orderDetails);
