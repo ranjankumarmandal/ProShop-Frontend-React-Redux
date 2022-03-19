@@ -51,7 +51,7 @@ const OrderScreen = ({ match }) => {
                 <Message>Your order is empty</Message>
               ) : (
                 <ListGroup variant='flush'>
-                  {cart.cartItems.map((item, index) => (
+                  {order.orderItems.map((item, index) => (
                     <ListGroup.Item key={index}>
                       <Row>
                         <Col md={1}>
