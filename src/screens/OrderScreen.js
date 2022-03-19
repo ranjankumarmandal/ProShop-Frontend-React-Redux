@@ -17,9 +17,13 @@ const OrderScreen = ({ match }) => {
     dispatch(getOrderDetails(orderId));
   }, []);
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : error ? (
+    <Message variant='danger'>{error}</Message>
+  ) : (
     <>
-      <CheckoutSteps step1 step2 step3 step4 />
+      <h1>Order {order._id}</h1>
       <Row>
         <Col md={8}>
           <ListGroup variant='flush'>
