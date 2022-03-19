@@ -47,7 +47,7 @@ const OrderScreen = ({ match }) => {
 
             <ListGroup.Item>
               <h2>Order Items</h2>
-              {cart.cartItems.length === 0 ? (
+              {order.orderItems.length === 0 ? (
                 <Message>Your cart is empty</Message>
               ) : (
                 <ListGroup variant='flush'>
