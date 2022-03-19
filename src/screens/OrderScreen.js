@@ -6,7 +6,8 @@ import Loader from '../components/Loader';
 import { Link } from 'react-router-dom';
 import { getOrderDetails } from '../actions/orderActions';
 
-const OrderScreen = ({ history }) => {
+const OrderScreen = ({ match }) => {
+  const orderId = match.params.id;
   const dispatch = useDispatch();
 
   const orderCreate = useSelector((state) => state.orderCreate);
