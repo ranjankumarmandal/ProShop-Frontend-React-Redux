@@ -39,19 +39,19 @@ export const orderDetailsReducer = (
 ) => {
   // define reducers with switch
   switch (action.type) {
-    case ORDER_CREATE_REQUEST:
+    case ORDER_DETAILS_REQUEST:
       return {
         loading: true,
       };
 
-    case ORDER_CREATE_SUCCESS:
+    case ORDER_DETAILS_SUCCESS:
       return {
         loading: false,
         success: true,
         order: action.payload,
       };
 
-    case ORDER_CREATE_FAIL:
+    case ORDER_DETAILS_FAIL:
       return {
         loading: false,
         error: action.payload,
