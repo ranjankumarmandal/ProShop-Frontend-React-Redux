@@ -13,6 +13,11 @@ const OrderScreen = ({ match }) => {
   const orderDetails = useSelector((state) => state.orderDetails);
   const { order, loading, error } = orderDetails;
 
+  const addDecimals = (number) => (Math.round(number * 100) / 100).toFixed(2);
+  order.itemsPrice = addDecimals(
+    order.orderItems.reduce((acc, curr) => acc + curr.price * curr.qty, 0)
+  );
+
   useEffect(() => {
     dispatch(getOrderDetails(orderId));
   }, []);
