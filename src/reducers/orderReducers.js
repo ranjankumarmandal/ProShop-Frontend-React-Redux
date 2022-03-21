@@ -9,6 +9,7 @@ import {
   ORDER_PAY_SUCCESS,
   ORDER_PAY_FAIL,
   ORDER_PAY_RESET,
+  ORDER_LIST_MY_REQUEST,
 } from '../constants/orderConstants';
 
 export const orderCreateReducer = (state = {}, action) => {
