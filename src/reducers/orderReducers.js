@@ -98,7 +98,7 @@ export const orderPayReducer = (state = {}, action) => {
 };
 
 export const orderListMyReducer = (state = {}, action) => {
-  // define reducers with switch fo orderPayReducer
+  // define reducers with switch fo orderListMyReducer
   switch (action.type) {
     default:
       return state;
