@@ -148,6 +148,16 @@ export const listMyOrder = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
+
+    const { data } = await axios.get(
+      'http://localhost:5000/api/orders/myorders',
+      config
+    );
+
+    dispatch({
+      type: ORDER_LIST_MY_SUCCESS,
+      payload: data,
+    });
   } catch (error) {
     dispatch({
       type: ORDER_LIST_MY_FAIL,
