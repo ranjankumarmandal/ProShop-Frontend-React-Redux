@@ -134,4 +134,14 @@ export const payOrder =
 
 export const listMyOrder = () => async (dispatch, getState) => {
   // implement listMyOrder() action function
+  try {
+  } catch (error) {
+    dispatch({
+      type: ORDER_LIST_MY_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
 };
