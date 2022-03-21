@@ -135,6 +135,9 @@ export const payOrder =
 export const listMyOrder = () => async (dispatch, getState) => {
   // implement listMyOrder() action function
   try {
+    dispatch({
+      type: ORDER_LIST_MY_REQUEST,
+    });
   } catch (error) {
     dispatch({
       type: ORDER_LIST_MY_FAIL,
