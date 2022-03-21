@@ -138,6 +138,16 @@ export const listMyOrder = () => async (dispatch, getState) => {
     dispatch({
       type: ORDER_LIST_MY_REQUEST,
     });
+
+    const {
+      userLogin: { userInfo },
+    } = getState();
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
   } catch (error) {
     dispatch({
       type: ORDER_LIST_MY_FAIL,
