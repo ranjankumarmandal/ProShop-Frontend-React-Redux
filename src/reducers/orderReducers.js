@@ -100,6 +100,11 @@ export const orderPayReducer = (state = {}, action) => {
 export const orderListMyReducer = (state = { orders: [] }, action) => {
   // define reducers with switch fo orderListMyReducer
   switch (action.type) {
+    case ORDER_LIST_MY_REQUEST:
+      return {
+        loading: true,
+      };
+
     default:
       return state;
   }
