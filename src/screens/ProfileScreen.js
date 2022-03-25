@@ -26,7 +26,7 @@ const ProfileScreen = ({ location, history }) => {
   const { success } = userUpdateProfile;
 
   const orderListMy = useSelector((state) => state.orderListMy);
-  const { loading: loadingOrders, error: errorOrdes, orders } = orderListMy;
+  const { loading: loadingOrders, error: errorOrders, orders } = orderListMy;
 
   useEffect(() => {
     if (!userInfo) history.push('/login');
@@ -105,7 +105,7 @@ const ProfileScreen = ({ location, history }) => {
 
       <Col md={9}>
         <h2>My Orders</h2>
-        {loadingOrders ? <Loader />}
+        {loadingOrders ? <Loader /> : error ? <Message variant='danger'>{errorOrders}</Message>}
       </Col>
     </Row>
   );
